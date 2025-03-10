@@ -1,11 +1,68 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import LinkedlnIcon from "../components/icons/Linkedln.astro";
+import BriefcaseIcon from "../components/icons/Briefcase.astro";
+import CodingIcon from "../components/icons/Coding.astro";
+import MailIcon from "../components/icons/MailForward.astro";
+import SocialPill from "../components/SocialPill.astro";
+import Experience from "../components/Experience.astro";
+import Projects from "../components/Projects.astro";
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Joan Duran' Portfolio" description="Aspiring Software Engineer">
+  <main class="px-4">
+    <SectionContainer class="py-44 pb-24">
+      <div class="flex">
+        <img
+          class="rounded-full size-24 mb-4"
+          src="/src/assets/Face.png"
+          alt="Profile Picture"
+        />
+        <div class="flex justify-center items-center">
+          <Badge>2025 Computer Science Graduate</Badge>
+        </div>
+      </div>
+      <h1
+        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
+        Hey, I'm Joan Duran
+      </h1>
+      <!-- Need to revisit this part in the future -->
+      <h2 class="text-l lg:text-xl text-wrap max-w-[700px] [&>strong]:text-yellow-200">
+        I'm currently a Senior Computer Science student at Wentworth Institute
+        of Technology.
+        <strong> Aspiring Software Engineer / Web Developer. </strong>
+        <!-- with a passion for learning new technologies and building software applications. -->
+      </h2>
+
+      <nav class="flex gap-4 mt-8 flex-wrap">
+        <SocialPill href="https://www.linkedin.com/in/joan-duran">
+          <LinkedlnIcon class="size-4 md:size-6" /> Linkedln
+        </SocialPill>
+        <SocialPill href="https://github.com/joanduran12">
+          <GitHubIcon class="size-4 md:size-6" /> GitHub
+        </SocialPill>
+        <SocialPill href="mailto:durancuevasj@wit.edu">
+          <MailIcon class="size-4 md:size-6" /> durancuevasj@wit.edu
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+    <SectionContainer id="experience">
+      <h2 class="text-3xl font-semibold mb-8 flex gap-x-3 items-center">
+        <BriefcaseIcon class="size-8" />
+        My Work Experiences
+      </h2>
+      <Experience />
+    </SectionContainer>
+    <SectionContainer id="projects">
+      <h2 class="text-3xl font-semibold mb-8 flex gap-x-3 items-center">
+        <CodingIcon class="size-8" />
+        Projects
+      </h2>
+      <Projects />
+    </SectionContainer>
+  </main>
 </Layout>

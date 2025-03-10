@@ -1,0 +1,70 @@
+---
+const navItems = [
+  {
+    title: "Home",
+    href: "#Top",
+  },
+  {
+    title: "Experience",
+    href: "#experience",
+  },
+  {
+    title: "Projects",
+    href: "#projects",
+  },
+  {
+    title: "About Me",
+    href: "#about",
+  },
+];
+---
+
+<header
+  class="fixed flex justify-center items-center py-5 w-full xl:w-100% mx-auto z-9999"
+>
+  <nav
+    class="flex px-3 py-1 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
+  >
+    {
+      navItems.map((item) => (
+        <a class="px-2 py-1 transition hover:text-blue-500" href={item.href}>
+          {item.title}
+        </a>
+      ))
+    }
+  </nav>
+</header>
+
+
+<style>
+  nav {
+  animation: nav-shadown 1s linear both;
+  animation-timeline: scroll();
+  animation-range: 0 100px;
+}
+
+nav {
+  background-color: #1f2937e6;
+}
+
+.dark nav {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+@keyframes nav-shadown {
+  0% {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  
+  .dark & {
+    background-color: rgba(31, 41, 55, 0);
+  }
+  
+  to {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    ring-width: 1px;
+    backdrop-filter: blur(4px);
+    ring-color: rgba(255, 255, 255, 0.1);
+  }
+}
+</style>
