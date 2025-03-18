@@ -11,7 +11,7 @@ const TAGS = {
     icon: NextJS,
   },
   TAILWIND: {
-    name: "Tailwind CSS",
+    name: "Tailwind",
     class: "bg-[#003159] text-white",
     icon: TailwindCSS,
   },
@@ -60,7 +60,7 @@ const PROJECTS = [
               {tags.map((tag) => (
                 <li>
                   <span
-                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                    class={`flex gap-x-2 rounded-full text-xs bg-[#043f6f] py-1 px-2 `}
                   >
                     <tag.icon class="size-4" />
                     {tag.name}
