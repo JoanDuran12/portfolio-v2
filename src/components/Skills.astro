@@ -1,0 +1,88 @@
+---
+import HTML from "../components/icons/Html.astro";
+import CSS from "../components/icons/Css.astro";
+import TailwindCSS from "../components/icons/TailwindCSS.astro";
+import JavaScript from "../components/icons/Javascript.astro";
+import MUI from "../components/icons/Mui.astro";
+import Python from "../components/icons/Python.astro";
+import Java from "../components/icons/Java.astro";
+import NextJS from "../components/icons/NextJS.astro";
+import NodeJS from "../components/icons/NodeJS.astro";
+import React from "../components/icons/React.astro";
+import Firebase from "../components/icons/Firebase.astro";
+import MongoDB from "../components/icons/MongoDB.astro";
+import AstroIcon from "../components/icons/MainIcon.astro";
+
+const SKILLS = [
+  {
+    name: "HTML",
+    icon: HTML,
+  },
+  {
+    name: "CSS",
+    icon: CSS,
+  },
+  {
+    name: "JavaScript",
+    icon: JavaScript,
+  },
+  {
+    name: "Tailwind",
+    icon: TailwindCSS,
+  },
+  {
+    name: "MUI",
+    icon: MUI,
+  },
+  {
+    name: "Python",
+    icon: Python,
+  },
+  {
+    name: "Java",
+    icon: Java,
+  },
+  {
+    name: "Astro",
+    icon: AstroIcon,
+  },
+  {
+    name: "Next.js",
+    icon: NextJS,
+  },
+  {
+    name: "Node.js",
+    icon: NodeJS,
+  },
+  {
+    name: "React",
+    icon: React,
+  },
+  {
+    name: "Firebase",
+    icon: Firebase,
+  },
+  {
+    name: "MongoDB",
+    icon: MongoDB,
+  },
+];
+---
+
+<div class="flex flex-wrap justify-center">
+  {
+    SKILLS.map(({ name, icon: Icon }) => (
+      <div
+        class={`bg-gray-800 border border-gray-800 
+          flex flex-row min-w-[140px]
+          text-m mx-1 px-4 py-2 gap-x-3 mb-2 
+          items-center justify-center rounded 
+          hover:bg-gray-700 transition durantion-300 ease-in-out
+          `}
+      >
+        <Icon class="size-8" />
+        <span>{name}</span>
+      </div>
+    ))
+  }
+</div>

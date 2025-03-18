@@ -10,6 +10,7 @@ import MailIcon from "../components/icons/MailForward.astro";
 import SocialPill from "../components/SocialPill.astro";
 import Experience from "../components/Experience.astro";
 import Projects from "../components/Projects.astro";
+import Skills from "../components/Skills.astro"
 ---
 
 <Layout title="Joan Duran' Portfolio" description="Aspiring Software Engineer">
@@ -18,7 +19,7 @@ import Projects from "../components/Projects.astro";
       <div class="flex">
         <img
           class="rounded-full size-24 mb-4"
-          src="../src/assets/Face.png"
+          src="/src/assets/Face.png"
           alt="Profile Picture"
         />
         <div class="flex justify-center items-center">
@@ -65,6 +66,13 @@ import Projects from "../components/Projects.astro";
         Projects
       </h2>
       <Projects />
+    </SectionContainer>
+    <SectionContainer>
+      <h2 class="text-3xl font-semibold mb-8 flex gap-x-3 items-center">
+        <CodingIcon class="size-8" />
+        Skills
+      </h2>
+      <Skills />
     </SectionContainer>
   </main>
 </Layout>
