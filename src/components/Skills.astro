@@ -12,6 +12,7 @@ import React from "../components/icons/React.astro";
 import Firebase from "../components/icons/Firebase.astro";
 import MongoDB from "../components/icons/MongoDB.astro";
 import AstroIcon from "../components/icons/MainIcon.astro";
+import TypeScript from "../components/icons/Typescript.astro";
 
 const SKILLS = [
   {
@@ -37,6 +38,10 @@ const SKILLS = [
   {
     name: "Python",
     icon: Python,
+  },
+  {
+    name: "TypeScript",
+    icon: TypeScript,
   },
   {
     name: "Java",
@@ -74,7 +79,7 @@ const SKILLS = [
     SKILLS.map(({ name, icon: Icon }) => (
       <div
         class={`bg-gray-800 border border-gray-800 
-          flex flex-row min-w-[140px]
+          flex flex-row min-w-[170px]
           text-m mx-1 px-4 py-2 gap-x-3 mb-2 
           items-center justify-center rounded 
           hover:bg-gray-700 transition durantion-300 ease-in-out
