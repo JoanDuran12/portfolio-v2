@@ -3,36 +3,76 @@ import TailwindCSS from "../components/icons/TailwindCSS.astro";
 import NextJS from "../components/icons/NextJS.astro";
 import GithubIcon from "../components/icons/GitHub.astro";
 import LinkIcon from "../components/icons/Link.astro";
+import HTML from "../components/icons/Html.astro";
+import CSS from "../components/icons/Css.astro";
+import JavaScript from "../components/icons/Javascript.astro";
+import MUI from "../components/icons/Mui.astro";
+import Python from "../components/icons/Python.astro";
+import Java from "../components/icons/Java.astro";
+import NodeJS from "../components/icons/NodeJS.astro";
+import React from "../components/icons/React.astro";
+import Firebase from "../components/icons/Firebase.astro";
+import MongoDB from "../components/icons/MongoDB.astro";
+import AstroIcon from "../components/icons/MainIcon.astro";
+import TypeScript from "../components/icons/Typescript.astro";
 
 const TAGS = {
   NEXT: {
     name: "Next.js",
-    class: "bg-black text-white",
     icon: NextJS,
   },
   TAILWIND: {
     name: "Tailwind",
-    class: "bg-[#003159] text-white",
     icon: TailwindCSS,
+  },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    icon: TypeScript,
+  },
+  FIREBASE: {
+    name: "Firebase",
+    icon: Firebase,
+  },
+  MUI: {
+    name: "MUI",
+    icon: MUI,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    icon: JavaScript,
   },
 };
 
+// PlaceHolder Image in case I ever need it
+// image: "https://placehold.co/600x400@2x?text=Coming+Soon&font=roboto.png",
+
 const PROJECTS = [
   {
-    title: "Project 1",
-    description: "This is a project description",
-    link: "https://svgl.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    title: "ResumeRight - (Ongoing Project)",
+    description:
+      "AI-powered resume builder that creates tailored, job-specific resumes by analyzing your previous resume and job descriptions, ensuring you stand out to recruiters with optimized, professional applications.",
+    // link: "https://svgl.app/",
+    // github: "https://github.com/xntle/rizz-gpt",
+    image: "/projects/resumeright.webp",
+    tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.TYPESCRIPT, TAGS.FIREBASE],
   },
   {
-    title: "Project 2",
-    description: "This is a project description",
-    link: "https://sv.app/",
-    github: "https://github.com/phe/svgl",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    title: "RizzGPT",
+    description:
+      "AI-powered chatbot that delivers clever comebacks and smooth lines on demand, helping you elevate your game in any conversation with confidence and style.",
+    // link: "https://svgl.app/",
+    github: "https://github.com/xntle/rizz-gpt",
+    image: "/projects/rizzgpt.webp",
+    tags: [TAGS.NEXT, TAGS.MUI, TAGS.FIREBASE, TAGS.JAVASCRIPT],
+  },
+  {
+    title: "Flashcards AI",
+    description:
+      "AI-powered flashcard app designed to help you master any subject with intelligent reviews, adaptive learning, and smart recall techniques to boost your retention.",
+    link: "https://flashcards-ai-beta.vercel.app/",
+    github: "https://github.com/manalafzal47/flashcards-ai",
+    image: "/projects/flashcardai.webp",
+    tags: [TAGS.NEXT, TAGS.MUI, TAGS.FIREBASE, TAGS.JAVASCRIPT],
   },
 ];
 ---
@@ -44,9 +84,8 @@ const PROJECTS = [
         <div class="w-full md:w-1/2">
           <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
             <img
-              alt="Recién llegado vs 5 años en Nueva Zelanda"
+              alt="Project Image"
               class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
-              loading="lazy"
               src={image}
             />
           </div>
