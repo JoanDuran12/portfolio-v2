@@ -6,6 +6,9 @@ import GitHubIcon from "../components/icons/GitHub.astro";
 import LinkedlnIcon from "../components/icons/Linkedln.astro";
 import BriefcaseIcon from "../components/icons/Briefcase.astro";
 import CodingIcon from "../components/icons/Coding.astro";
+import UserIcon from "../components/icons/User.astro";
+import StackIcon from "../components/icons/Stack.astro";
+import FileIcon from "../components/icons/File.astro";
 import MailIcon from "../components/icons/MailForward.astro";
 import SocialPill from "../components/SocialPill.astro";
 import Experience from "../components/Experience.astro";
@@ -23,7 +26,7 @@ import Skills from "../components/Skills.astro"
           alt="Profile Picture"
         />
         <div class="flex justify-center items-center">
-          <Badge>2025 Computer Science Graduate</Badge>
+          <Badge>Software Developer</Badge>
         </div>
       </div>
       <h1
@@ -49,7 +52,10 @@ import Skills from "../components/Skills.astro"
           <GitHubIcon class="size-4 md:size-6" /> GitHub
         </SocialPill>
         <SocialPill href="mailto:durancuevasj@wit.edu">
-          <MailIcon class="size-4 md:size-6" /> durancuevasj@wit.edu
+          <MailIcon class="size-4 md:size-6" /> joanduran.dev@gmail.com
+        </SocialPill>
+        <SocialPill href="https://drive.google.com/file/d/19UY5YaM-onSYTJ-7XbrqyCxB-mARWz1G/view?usp=sharing">
+          <FileIcon class="size-4 md:size-6" /> Resume
         </SocialPill>
       </nav>
     </SectionContainer>
@@ -69,10 +75,17 @@ import Skills from "../components/Skills.astro"
     </SectionContainer>
     <SectionContainer id="skills">
       <h2 class="text-3xl font-semibold mb-8 flex gap-x-3 items-center">
-        <CodingIcon class="size-8" />
+        <StackIcon class="size-8" />
         Skills
       </h2>
       <Skills />
+    </SectionContainer>
+    <SectionContainer id="about">
+      <h2 class="text-3xl font-semibold mb-8 flex gap-x-3 items-center">
+        <UserIcon class="size-8" />
+        About Me
+      </h2>
+      <!-- <Skills /> -->
     </SectionContainer>
   </main>
 </Layout>
