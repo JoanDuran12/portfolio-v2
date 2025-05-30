@@ -32,7 +32,7 @@ const { title, description, link, bulletPoints, date } = Astro.props;
       {description}
     </p>
     <ul
-      class="list-disc list-outside pl-8 text-gray-200 bullet-points transition-all duration-300"
+      class="list-disc list-outside pl-8 text-gray-200 bullet-points hidden transition-all duration-300"
     >
       {bulletPoints.map((point: String) => <li class="mb-1">{point}</li>)}
     </ul>
