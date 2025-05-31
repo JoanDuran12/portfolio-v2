@@ -5,7 +5,6 @@ import TailwindCSS from "../components/icons/TailwindCSS.astro";
 import JavaScript from "../components/icons/Javascript.astro";
 import MUI from "../components/icons/Mui.astro";
 import Python from "../components/icons/Python.astro";
-import Java from "../components/icons/Java.astro";
 import NextJS from "../components/icons/NextJS.astro";
 import NodeJS from "../components/icons/NodeJS.astro";
 import React from "../components/icons/React.astro";
@@ -13,81 +12,98 @@ import Firebase from "../components/icons/Firebase.astro";
 import MongoDB from "../components/icons/MongoDB.astro";
 import AstroIcon from "../components/icons/MainIcon.astro";
 import TypeScript from "../components/icons/Typescript.astro";
+import SQLite from "../components/icons/SQLite.astro";
+import Git from "../components/icons/Git.astro";
 
-const SKILLS = [
-  {
-    name: "HTML",
-    icon: HTML,
-  },
-  {
-    name: "CSS",
-    icon: CSS,
-  },
-  {
-    name: "JavaScript",
-    icon: JavaScript,
-  },
-  {
-    name: "Tailwind",
-    icon: TailwindCSS,
-  },
-  {
-    name: "MUI",
-    icon: MUI,
-  },
-  {
-    name: "Python",
-    icon: Python,
-  },
-  {
-    name: "TypeScript",
-    icon: TypeScript,
-  },
-  {
-    name: "Java",
-    icon: Java,
-  },
-  {
-    name: "Astro",
-    icon: AstroIcon,
-  },
-  {
-    name: "Next.js",
-    icon: NextJS,
-  },
-  {
-    name: "Node.js",
-    icon: NodeJS,
-  },
-  {
-    name: "React",
-    icon: React,
-  },
-  {
-    name: "Firebase",
-    icon: Firebase,
-  },
-  {
-    name: "MongoDB",
-    icon: MongoDB,
-  },
+const LANGUAGES = [
+  { name: "JavaScript", icon: JavaScript },
+  { name: "TypeScript", icon: TypeScript },
+  { name: "Python", icon: Python },
+  { name: "HTML", icon: HTML },
+  { name: "CSS", icon: CSS },
+];
+
+const FRAMEWORKS = [
+  { name: "React", icon: React },
+  { name: "Next.js", icon: NextJS },
+  { name: "Node.js", icon: NodeJS },
+  { name: "Astro", icon: AstroIcon },
+  { name: "MUI", icon: MUI },
+  { name: "Tailwind CSS", icon: TailwindCSS },
+];
+
+const DATABASES = [
+  { name: "Firebase", icon: Firebase },
+  { name: "MongoDB", icon: MongoDB },
+  { name: "SQLite", icon: SQLite },
+  { name: "Pinecone"},
+  { name: "Git", icon: Git },
 ];
 ---
 
-<div class="flex flex-wrap justify-center">
-  {
-    SKILLS.map(({ name, icon: Icon }) => (
-      <div
-        class={`bg-gray-800 border border-gray-800 
+<div class="mb-4">
+  <h2 class="text-xl font-semibold mb-2 flex gap-x-3 items-center">
+    Programming Languagues:
+  </h2>
+  <div class="flex flex-wrap">
+    {
+      LANGUAGES.map(({ name, icon: Icon }) => (
+        <div
+          class={`bg-gray-800 border border-gray-800 
           flex flex-row min-w-[170px]
           text-m mx-1 px-4 py-2 gap-x-3 mb-2 
           items-center justify-center rounded 
           hover:bg-gray-700 transition durantion-300 ease-in-out
           `}
-      >
-        <Icon class="size-8" />
-        <span>{name}</span>
-      </div>
-    ))
-  }
+        >
+          {Icon && <Icon class="size-8" />}
+          <span>{name}</span>
+        </div>
+      ))
+    }
+  </div>
+</div>
+<div class="mb-4">
+  <h2 class="text-xl font-semibold mb-2 flex gap-x-3 items-center">
+    Frameworks & Libraries:
+  </h2>
+  <div class="flex flex-wrap">
+    {
+      FRAMEWORKS.map(({ name, icon: Icon }) => (
+        <div
+          class={`bg-gray-800 border border-gray-800 
+          flex flex-row min-w-[170px]
+          text-m mx-1 px-4 py-2 gap-x-3 mb-2 
+          items-center justify-center rounded 
+          hover:bg-gray-700 transition durantion-300 ease-in-out
+          `}
+        >
+          {Icon && <Icon class="size-8" />}
+          <span>{name}</span>
+        </div>
+      ))
+    }
+  </div>
+</div>
+<div>
+  <h2 class="text-xl font-semibold mb-2 flex gap-x-3 items-center">
+    Databases, Services & Tools:
+  </h2>
+  <div class="flex flex-wrap">
+    {
+      DATABASES.map(({ name, icon: Icon }) => (
+        <div
+          class={`bg-gray-800 border border-gray-800 
+          flex flex-row min-w-[170px]
+          text-m mx-1 px-4 py-2 gap-x-3 mb-2 
+          items-center justify-center rounded 
+          hover:bg-gray-700 transition durantion-300 ease-in-out
+          `}
+        >
+          {Icon && <Icon class="size-8" />}
+          <span>{name}</span>
+        </div>
+      ))
+    }
+  </div>
 </div>
