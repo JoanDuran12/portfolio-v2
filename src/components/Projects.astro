@@ -15,6 +15,8 @@ import Firebase from "../components/icons/Firebase.astro";
 import MongoDB from "../components/icons/MongoDB.astro";
 import AstroIcon from "../components/icons/MainIcon.astro";
 import TypeScript from "../components/icons/Typescript.astro";
+import Gemini from "../components/icons/Gemini.astro";
+import OpenAI from "../components/icons/OpenAI.astro";
 
 const TAGS = {
   NEXT: {
@@ -41,6 +43,27 @@ const TAGS = {
     name: "JavaScript",
     icon: JavaScript,
   },
+  NODEJS: {
+    name: "Node.js",
+    icon: NodeJS,
+  },
+  GEMINI: {
+    name: "Gemini",
+    icon: Gemini,
+  },
+  OPENAI: {
+    name: "OpenAI",
+    icon: OpenAI,
+  },
+  PINECONE: {
+    name: "Pinecone",
+  },
+  LANGCHAIN: {
+    name: "LangChain",
+  },
+  STRIPE: {
+    name: "Stripe",
+  },
 };
 
 // PlaceHolder Image in case I ever need it
@@ -52,18 +75,34 @@ const PROJECTS = [
     description:
       "AI-powered resume builder that creates tailored, job-specific resumes by analyzing your previous resume and job descriptions, ensuring you stand out to recruiters with optimized, professional applications.",
     // link: "https://svgl.app/",
-    // github: "https://github.com/xntle/rizz-gpt",
+    github: "https://github.com/JoanDuran12/ResumeRight",
     image: "/projects/resumeright.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.TYPESCRIPT, TAGS.FIREBASE],
+    tags: [
+      TAGS.NEXT,
+      TAGS.TAILWIND,
+      TAGS.TYPESCRIPT,
+      TAGS.FIREBASE,
+      TAGS.NODEJS,
+      TAGS.GEMINI,
+    ],
   },
   {
     title: "RizzGPT",
     description:
       "AI-powered chatbot that delivers clever comebacks and smooth lines on demand, helping you elevate your game in any conversation with confidence and style.",
-    // link: "https://svgl.app/",
+    link: "https://rizzgpt.thaianle.com/auth",
     github: "https://github.com/xntle/rizz-gpt",
     image: "/projects/rizzgpt.webp",
-    tags: [TAGS.NEXT, TAGS.MUI, TAGS.FIREBASE, TAGS.JAVASCRIPT],
+    tags: [
+      TAGS.NEXT,
+      TAGS.MUI,
+      TAGS.FIREBASE,
+      TAGS.JAVASCRIPT,
+      TAGS.NODEJS,
+      TAGS.OPENAI,
+      TAGS.PINECONE,
+      TAGS.LANGCHAIN,
+    ],
   },
   {
     title: "Flashcards AI",
@@ -72,7 +111,15 @@ const PROJECTS = [
     link: "https://flashcards-ai-beta.vercel.app/",
     github: "https://github.com/manalafzal47/flashcards-ai",
     image: "/projects/flashcardai.webp",
-    tags: [TAGS.NEXT, TAGS.MUI, TAGS.FIREBASE, TAGS.JAVASCRIPT],
+    tags: [
+      TAGS.NEXT,
+      TAGS.MUI,
+      TAGS.FIREBASE,
+      TAGS.JAVASCRIPT,
+      TAGS.NODEJS,
+      TAGS.OPENAI,
+      TAGS.STRIPE,
+    ],
   },
 ];
 ---
@@ -84,7 +131,8 @@ const PROJECTS = [
         <div class="w-full md:w-1/2">
           <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
             <img
-              alt="Project Image"
+              alt="Project - "
+              {title}
               class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
               src={image}
             />
@@ -94,14 +142,12 @@ const PROJECTS = [
           <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
             {title}
           </h3>
-          <div class="flex flex-col flex-wrap mt-2">
-            <ul class="flex flex-row mb-2 gap-x-2">
+          <div class="flex flex-col mt-2 xl:w-[500px]">
+            <ul class="flex flex-wrap flex-row mb-2 gap-x-2 gap-y-1">
               {tags.map((tag) => (
                 <li>
-                  <span
-                    class={`flex gap-x-2 rounded-full text-xs bg-[#043f6f] py-1 px-2 `}
-                  >
-                    <tag.icon class="size-4" />
+                  <span class="flex gap-x-2 rounded-full text-xs bg-[#043f6f] py-1 px-2">
+                    {"icon" in tag && <tag.icon class="size-4" />}
                     {tag.name}
                   </span>
                 </li>
