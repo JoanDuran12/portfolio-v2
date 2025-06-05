@@ -66,6 +66,7 @@ const { title, description, link, bulletPoints, date } = Astro.props;
 }
 
 <script>
+  // This scripts toggles (show/hide) the visibility of the bullet points and rotates the arrow icon acordingly
   document.querySelectorAll(".experience-content").forEach((content) => {
     const toggleTrigger = content.querySelector(".toggle-content");
     const bulletPoints = content.querySelector(".bullet-points");
