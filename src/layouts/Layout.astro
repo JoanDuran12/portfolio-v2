@@ -14,7 +14,7 @@ const { description, title } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/headshot.png" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <Analytics />
@@ -30,9 +30,7 @@ const { description, title } = Astro.props;
     <Header />
     <slot />
     <Footer />
-  </body>
-
-  <style is:global>
+  </body><style is:global>
     :root {
       color-scheme: light dark;
     }
